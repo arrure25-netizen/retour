@@ -18,7 +18,7 @@ export default function Connexion() {
       options: { emailRedirectTo: `${window.location.origin}/auth/callback` },
     });
     setEtat(error ? "erreur" : "envoye");
-    if (error) alert(error.message + " / " + process.env.NEXT_PUBLIC_SUPABASE_URL + " / " + (process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ?? "").length);
+    if (error) alert(error.message);
   }
 
   return (
