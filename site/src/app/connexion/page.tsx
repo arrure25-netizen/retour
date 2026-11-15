@@ -18,6 +18,7 @@ export default function Connexion() {
       options: { emailRedirectTo: `${window.location.origin}/auth/callback` },
     });
     setEtat(error ? "erreur" : "envoye");
+    if (error) alert(error.message);
   }
 
   return (
